@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=80.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# project
+[project]
+name = "pydpack"
+description = "This is a pydpack.（pyd打包，可将py目录或文件打包成pyd(so)）"
+authors = [{ name = "axiner", email = "atpuxiner@163.com" }]
+urls = { Homepage = "https://github.com/atpuxiner/pydpack" }
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.11"
+license-files = ["LICENSE"]
+readme = "README.md"
+dynamic = [
+    "version",
+    "dependencies",
+]
+
+[project.scripts]
+pydpack = "pydpack.__main__:main"
+
+# tool
+[tool.setuptools.dynamic]
+version = { attr = "pydpack.__version__" }
+dependencies = { file = "requirements.txt" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = [
+    "dist*",
+]
