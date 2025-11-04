@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 # Python>=3.11
-toollib
-Cython
+toollib>=1.8.7
+Cython>=3.1.6

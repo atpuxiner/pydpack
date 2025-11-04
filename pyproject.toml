@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 # project
 [project]
 name = "pydpack"
-description = "This is a pydpack.（pyd打包，可将py目录或文件打包成pyd(so)）"
+description = "This is a pydpack."
 authors = [{ name = "axiner", email = "atpuxiner@163.com" }]
 urls = { Homepage = "https://github.com/atpuxiner/pydpack" }
 classifiers = [

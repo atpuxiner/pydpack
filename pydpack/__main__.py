@@ -50,11 +50,9 @@ def main():
         metavar="",
         help='忽略复制（正则表达式，使用管道等注意加引号）')
     parser.add_argument(
-        '--suffix',
-        default='Pyd',
-        type=str,
-        metavar="",
-        help='后缀（默认Pyd）')
+        '--ext-suffix',
+        action='store_true',
+        help='是否保留扩展后缀（默认不保留）')
     parser.add_argument(
         '--clean',
         action='store_true',
@@ -68,7 +66,7 @@ def main():
         src=src,
         exclude=args.exclude,
         ignore=args.ignore,
-        suffix=args.suffix,
+        keep_ext_suffix=args.ext_suffix,
         is_clean=args.clean,
     )
     packer.run()
